@@ -5,7 +5,9 @@ function App() {
     <div className="App">
       {/* <header className="title" id="bottom"> */}
         <h1 className="title">
-          x<span id="hide">inyu&nbsp;</span>m<span id="hide">ichelle&nbsp;</span>z<span id="hide">hang</span>
+          x<span id="hide">inyu&nbsp;</span>
+          m<span id="hide">ichelle&nbsp;</span>
+          z<span id="hide">hang</span>
         </h1>
       {/* </header>         */}
       <h2 className="links">      

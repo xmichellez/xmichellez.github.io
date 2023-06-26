@@ -8,7 +8,7 @@ a:hover{
 a:visited{  
   color: #5f506b;
   text-decoration: none;}
-
+    
 .App {
   text-align: center;
   background-color: #16232b;
@@ -16,40 +16,66 @@ a:visited{
   flex-direction: column;
 }
 
-.title {
-  min-height: 30vh;
-  flex-direction: column;
-  font-size: calc(80px + 2vmin);
-  color: #daffef;
-  text-shadow: 5px 5px #6A6B83;
-  position: relative;
-  margin-top: 15%;
+@media only screen and (max-width: 750px) {
+  .links {
+    display: block;
+    font-size: calc(20px + 2vmin);
+    color: #6A6B83;
+  }
+  .title {
+    min-height: 30vh;
+    font-size: calc(70px + 2vmin);
+    color: #daffef;
+    text-shadow: 5px 5px #6A6B83;
+    margin-top: 15%;
+  }  
+  #hide {
+    display: inline-block;
+    max-width: 0%;
+    vertical-align: bottom;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: max-width 1s ease-in-out;
+  }
+  }
+
+@media only screen and (min-width: 751px) {
+  .links {
+    display: inline-flex;
+    flex: 1;
+    align-items: start;
+    justify-content: space-evenly;
+    font-size: calc(20px + 2vmin);
+    color: #6A6B83;
+  }
+  .title {
+    min-height: 30vh;
+    flex-direction: column;
+    font-size: calc(80px + 2vmin);
+    color: #daffef;
+    text-shadow: 5px 5px #6A6B83;
+    position: relative;
+    margin-top: 15%;
+  }
+
+  #hide {
+    display: inline-block;
+    max-width: 0%;
+    vertical-align: bottom;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: max-width 1s ease-in-out;
+  }
+  
+  h1 {
+    cursor: default;
+    font-size: 5vw;
+  }
+  
+  /* On hover of the h1 tag, we are gonna max out the max-width. */
+  h1:hover #hide {
+    max-width: 100%;
+  }  
 }
 
-.links {
-  display: inline-flex;
-  flex: 1;
-  align-items: start;
-  justify-content: space-evenly;
-  font-size: calc(20px + 2vmin);
-  color: #6A6B83;
-}
 
-#hide {
-  display: inline-block;
-  max-width: 0%;
-  vertical-align: bottom;
-  overflow: hidden;
-  white-space: nowrap;
-  transition: max-width 1s ease-in-out;
-}
-
-h1 {
-  cursor: default;
-  font-size: 5vw;
-}
-
-/* On hover of the h1 tag, we are gonna max out the max-width. */
-h1:hover #hide {
-  max-width: 100%;
-}
